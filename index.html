@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<title>See your face</title>
+</head>
+<body>
+
+
+<video id="client" autoplay></video>
+
+
+<button onclick="capture()">Take Snap</button>
+
+<canvas id="myCanvas" width="650" height="400" style="border:1px solid red"></canvas>
+<script>
+
+var video = document.getElementById("client");
+navigator.webkitGetUserMedia({audio:true,video:true}, success, error);
+function success(stream) {
+	video.src= window.URL.createObjectURL(stream);
+}
+function error() {
+	alert('Some Error');
+}
+function capture() {
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext('2d');
+	ctx.drawImage(video, 0, 0);
+	
+}
+</script>
+</body>
+</html><!doctype html>
+<html>
+<head>
+	<title>See your face</title>
+</head>
+<body>
+
+
+<video id="client" autoplay></video>
+
+
+<button onclick="capture()">Take Snap</button>
+
+<canvas id="myCanvas" width="650" height="400" style="border:1px solid red"></canvas>
+<script>
+
+var video = document.getElementById("client");
+navigator.webkitGetUserMedia({audio:true,video:true}, success, error);
+function success(stream) {
+	video.src= window.URL.createObjectURL(stream);
+}
+function error() {
+	alert('Some Error');
+}
+function capture() {
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext('2d');
+	ctx.drawImage(video, 0, 0);
+	
+}
+</script>
+</body>
+</html>
